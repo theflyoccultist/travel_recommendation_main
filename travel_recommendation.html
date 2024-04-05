@@ -2,7 +2,6 @@
 <html>
     <head>
         <title>Travel Recommendation</title>
-        <script src=./travel_recommendation.js></script>
     </head>
     
     <body>
@@ -12,12 +11,15 @@
                 <a href="./about_us.html">About Us</a>
                 <a href="./contact_us.html">Contact Us</a>
                 <form action="/search" method="get">
-                    <input type="text" name="query" placeholder="Enter a destination or keyword">
-                    <button type="submit">Search</button>
+                    <input type="text" id="searchTextField" name="query" placeholder="Enter a destination or keyword">
+                    <button id="searchBtn">Search</button>
                     <button type="reset">Clear</button>
                 </form>
             </div>
         </nav>
+
+        <div class="result">
+        </div>
 
         <div>
             <button id="twitter">Twitter</button>
@@ -39,6 +41,6 @@
                 <button type="submit">Book Now</button>
             </div>
         </section>
-
+            <script src=./travel_recommendation.js></script>
     </body>
 </html>
