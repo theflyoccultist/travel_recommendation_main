@@ -12,6 +12,7 @@ document.getElementById('searchBtn').addEventListener('click', function() {
     fetch('travel_recommendation_api.json')
         .then(response => response.json())
         .then(data => {
+            //search for cities by country
             const country = data.countries.find(item => item.name.toLowerCase() === input);
             if (country) {
                 const cities = country.cities;
@@ -33,6 +34,44 @@ document.getElementById('searchBtn').addEventListener('click', function() {
                 }
             } else {
                 resultDiv.innerHTML = `<p>Country not found</p>`;
+            }
+
+            // Search for temples if the input contains the keyword "temple"
+            if (input.includes('temple')) {
+                const temples = data.temples;
+                if (temples.length > 0) {
+                    resultDiv.innerHTML += `<p>Temples:</p>`;
+                    temples.forEach(temple => {
+                        resultDiv.innerHTML += `
+                            <div>
+                                <h3>${temple.name}</h3>
+                                <p>Description: ${temple.description}</p>
+                                <img src="${temple.imageUrl}" alt="${temple.name}">
+                            </div>
+                        `;
+                    });
+                } else {
+                    resultDiv.innerHTML += `<p>No temples found</p>`;
+                }
+            }
+
+            // Search for beaches if the input contains the keyword "beach"
+            if (input.includes('beach')) {
+                const beaches = data.beaches;
+                if (beaches.length > 0) {
+                    resultDiv.innerHTML += `<p>Beaches:</p>`;
+                    beaches.forEach(beach => {
+                        resultDiv.innerHTML += `
+                            <div>
+                                <h3>${beach.name}</h3>
+                                <p>Description: ${beach.description}</p>
+                                <img src="${beach.imageUrl}" alt="${beach.name}">
+                            </div>
+                        `;
+                    });
+                } else {
+                    resultDiv.innerHTML += `<p>No beaches found</p>`;
+                }
             }
         })
         .catch(error => {
