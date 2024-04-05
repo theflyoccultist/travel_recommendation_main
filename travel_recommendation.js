@@ -32,8 +32,6 @@ document.getElementById('searchBtn').addEventListener('click', function() {
                 } else {
                     resultDiv.innerHTML = `<p>No cities found for ${country.name}</p>`;
                 }
-            } else {
-                resultDiv.innerHTML = `<p>Country not found</p>`;
             }
 
             // Search for temples if the input contains the keyword "temple"
