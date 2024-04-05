@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Travel Recommendation</title>
     </head>
     
@@ -10,16 +12,14 @@
                 <a href="./travel_recommendation.html">Home</a>
                 <a href="./about_us.html">About Us</a>
                 <a href="./contact_us.html">Contact Us</a>
-                <form action="/search" method="get">
-                    <input type="text" id="searchTextField" name="query" placeholder="Enter a destination or keyword">
+                    <input type="text" id="searchTextField" placeholder="Enter a destination or keyword">
                     <button id="searchBtn">Search</button>
-                    <button type="reset">Clear</button>
-                </form>
+                    <button id="clearBtn">Clear</button>
             </div>
         </nav>
 
-        <div class="result">
-        </div>
+        <div id="result"></div>
+
 
         <div>
             <button id="twitter">Twitter</button>
