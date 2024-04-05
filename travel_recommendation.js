@@ -1,9 +1,3 @@
-document.getElementById('clearBtn').addEventListener('click', function() {
-    const input = document.getElementById('searchTextField').value = '';
-    const resultDiv = document.getElementById('result');
-    resultDiv.innerHTML = '';
-});
-
 document.getElementById('searchBtn').addEventListener('click', function() {
     const input = document.getElementById('searchTextField').value.toLowerCase();
     const resultDiv = document.getElementById('result');
@@ -26,6 +20,7 @@ document.getElementById('searchBtn').addEventListener('click', function() {
                                 <h3>${city.name}</h3>
                                 <p>Description: ${city.description}</p>
                                 <img src="${city.imageUrl}" alt="${city.name}">
+                                <button>Visit</button>
                             </div>
                         `;
                     }
@@ -45,6 +40,7 @@ document.getElementById('searchBtn').addEventListener('click', function() {
                                 <h3>${temple.name}</h3>
                                 <p>Description: ${temple.description}</p>
                                 <img src="${temple.imageUrl}" alt="${temple.name}">
+                                <button>Visit</button>
                             </div>
                         `;
                     });
@@ -64,6 +60,7 @@ document.getElementById('searchBtn').addEventListener('click', function() {
                                 <h3>${beach.name}</h3>
                                 <p>Description: ${beach.description}</p>
                                 <img src="${beach.imageUrl}" alt="${beach.name}">
+                                <button>Visit</button>
                             </div>
                         `;
                     });
@@ -76,4 +73,10 @@ document.getElementById('searchBtn').addEventListener('click', function() {
             console.error('Error:', error);
             resultDiv.innerHTML = `<p>An error occurred while fetching data.</p>`;
         });
+});
+
+document.getElementById('clearBtn').addEventListener('click', function() {
+    const input = document.getElementById('searchTextField').value = '';
+    const resultDiv = document.getElementById('result');
+    resultDiv.innerHTML = '';
 });

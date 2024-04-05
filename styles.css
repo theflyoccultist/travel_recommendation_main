@@ -1,0 +1,33 @@
+nav {
+    background-color: #f0f0f0;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+
+#background_image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    opacity: 0.5;
+    }
+
+#result{
+    height: 400px;
+    width: 500px;
+    display: flex;
+    align-items: right;
+    justify-content: space-around;
+    flex-direction: column;
+    }
+#result img{
+    width: 200px;
+    height: 100px;
+    }
