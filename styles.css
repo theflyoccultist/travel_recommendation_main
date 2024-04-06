@@ -7,18 +7,44 @@ h1 {
     font-size: 60pt;
 }
 
+h2 {
+    font-size: 36pt;
+}
+
 nav {
     background-color: #04484b52;
-    padding: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
-  }
+    padding: 30px;
+    overflow: hidden;
+}
+
+nav #pageIcon {
+    float: left;
+}
+
+nav #pageLinks {
+    text-align: center;
+}
+
+nav #pageLinks a {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+nav #searchBar {
+    float: right;
+    margin: 0 20px;
+}
+
+a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
 
 button {
     background-color: green;
     margin: auto;
+    color: white;
 }
 
 #background_image {
@@ -47,8 +73,19 @@ button {
 
 #socials{
     display: flex;
-    height: 100vh;
+    height: 80vh;
     float: left;
     flex-direction: column;
     padding : 50px;
+}
+
+#socials button img{
+    width: 64px;
+    height: 64px;
+}
+
+#contactForm{
+    width: calc(100% - 300px);
+    float: right;
+    margin-left: 20px;
 }
