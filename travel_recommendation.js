@@ -16,7 +16,7 @@ document.getElementById('searchBtn').addEventListener('click', function() {
                     for (let i = 0; i < 2; i++) {
                         const city = cities[i];
                         resultDiv.innerHTML += `
-                            <div>
+                            <div id="resultBlock">
                                 <img src="${city.imageUrl}" alt="${city.name}">
                                 <h3>${city.name}</h3>
                                 <p>Description: ${city.description}</p>
@@ -36,7 +36,7 @@ document.getElementById('searchBtn').addEventListener('click', function() {
                     resultDiv.innerHTML += `<p>Temples:</p>`;
                     temples.forEach(temple => {
                         resultDiv.innerHTML += `
-                            <div>
+                            <div id="resultBlock">
                                 <img src="${temple.imageUrl}" alt="${temple.name}">
                                 <h3>${temple.name}</h3>
                                 <p>Description: ${temple.description}</p>
@@ -56,7 +56,7 @@ document.getElementById('searchBtn').addEventListener('click', function() {
                     resultDiv.innerHTML += `<p>Beaches:</p>`;
                     beaches.forEach(beach => {
                         resultDiv.innerHTML += `
-                            <div>
+                            <div id="resultBlock">
                                 <img src="${beach.imageUrl}" alt="${beach.name}">
                                 <h3>${beach.name}</h3>
                                 <p>Description: ${beach.description}</p>
